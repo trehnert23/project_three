@@ -2,10 +2,15 @@
 
 <h1>ITEMS PAGE</h1>
 <hr>
-<% @items.each do |item| %>
-  <p>Title: <%= item.title %></p>
-  <p>Price: <%= item.price %></p>
-  <img src="<%= item.photo %>"><br>
-  <a href="/items/<%= item.id %>">Read More!</a>
-  <hr>
-<% end %>
+<div class="items_container">
+	<div id="columns">
+		<% @items.each do |item| %>
+			<div class="items_list">
+				<img class="items_list_image" src="<%= item.photo %>"><br>
+				<p>Title: <%= item.title %></p>
+				<p>Price: <%= item.price %></p>
+				<a href="/items/<%= item.id %>">Barter!</a>
+			</div>
+		<% end %>
+	</div>
+</div>

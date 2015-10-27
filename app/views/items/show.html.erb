@@ -1,5 +1,25 @@
-<h1>SHOW PAGE</h1>
-<p>Title: <%= @item.title %></p>
-<p>Description: <%= @item.description %></p>
-<p>Price: <%= @item.price %></p>
-<img src="<%= @item.photo %>">
+<%= render 'partials/nav_home' %>
+
+<!-- BARTER PAGE -->
+
+<div class="barter_their_half">
+	<div class="their_item">
+		<img src="<%= @item.photo %>">
+		<p>Title: <%= @item.title %></p>
+		<p>Description: <%= @item.description %></p>
+		<p>Price: <%= @item.price %></p>
+	</div>
+</div>
+
+<div class="barter_your_half">
+	<div class="your_item">
+		<% @current_user.items.each do |item| %>
+			<div class="your_list">
+				<img src="<%= item.photo %>"><br>
+				<p>Title: <%= item.title %></p>
+				<p>Description: <%= item.description %></p>
+				<p>Price: <%= item.price %></p>
+			</div>
+		<% end %>
+	</div>
+</div>
