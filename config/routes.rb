@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
   delete '/sessions', to: 'sessions#destroy'
 
+  get "/users/:id", to: "users#show", as: 'user'
+
+  resources :items
   resources :users
   resources :users do
     resources :items

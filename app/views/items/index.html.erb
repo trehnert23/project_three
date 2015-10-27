@@ -1,4 +1,6 @@
-<h1>HOME PAGE</h1>
+<%= render 'partials/nav_home' %>
+
+<h1>ITEMS PAGE</h1>
 <hr>
 <% @items.each do |item| %>
   <p>Title: <%= item.title %></p>
