@@ -1,0 +1,11 @@
+<%= form_for @item do |f| %>
+  <span>Title: </span>
+  <%= f.text_field :title, required: true %><br>
+  <span>Description: </span>
+  <%= f.text_field :description, required: true %><br>
+  <span>Price: </span>
+  <%= f.number_field :price, required: true %><br>
+  <span>Photo: </span>
+  <%= f.url_field :photo, required: true %><br>
+  <%= f.submit %>
+<% end %>
