@@ -14,7 +14,7 @@
       <ul class="nav navbar-nav home_nav_button navbar-right">
         <% if current_user %>
           <li><%= link_to "Logout", sessions_path , {method: :delete} %></li>
-          <li><a href="/users/<%= current_user.id %>" type="button">Profile</a></li> 
+          <li><%= link_to "Profile", user_path(current_user)%></li>
           <li><%= link_to "Items", "/items" %></li>
         <% else %>
           <li><a data-toggle="modal" href="#signup-modal">Sign Up</a></li>
@@ -25,3 +25,4 @@
     </div>
   </div>
 </nav>
+

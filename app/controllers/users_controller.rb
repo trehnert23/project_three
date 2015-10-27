@@ -17,8 +17,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_id(params[:id])
-    @current_user = current_user
+    @user = current_user
+    @item = Item.new
+    @items = @user.items
+    
   end
 
   def edit

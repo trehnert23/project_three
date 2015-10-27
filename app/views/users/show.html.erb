@@ -1,2 +1,40 @@
+<%= render 'partials/user_nav' %>
 
-		<%= render 'partials/user_nav' %>
+<!-- new item modal -->
+<div id="item-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">New Item</h4>
+      </div>
+      <div class="modal-body">
+        <div class="signup-wrapper">
+           <%= form_for @item do |f| %>
+             <span>Title: </span>
+             <%= f.text_field :title, required: true %><br>
+             <span>Description: </span>
+             <%= f.text_field :description, required: true %><br>
+             <span>Price: </span>
+             <%= f.number_field :price, required: true %><br>
+             <span>Photo: </span>
+             <%= f.url_field :photo, required: true %><br>
+             <%= f.submit %>
+          <% end %>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- listing user's items -->
+<% @items.each do |item| %>
+  <p>Title: <%= item.title %></p>
+  <p>Description: <%= item.description %></p>
+  <p>Price: <%= item.price %></p>
+  <img src="<%= item.photo %>"><br>
+  <a href="item_edit_path(<%= item.id %>)">Edit this item!</a>
+  <hr>
+<% end %>
+

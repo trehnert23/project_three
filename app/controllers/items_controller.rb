@@ -4,6 +4,8 @@ class ItemsController < ApplicationController
 	end
 
 	def show
+		@user = User.find_by_id(params[:id])
+		@current_user = current_user
 		@item = Item.find(params[:id]);
 	end
 
@@ -12,13 +14,17 @@ class ItemsController < ApplicationController
 	end
 
 	def create
-		Item.create(item_params)
-		redirect_to('/items')
+		@user = current_user
+		item_params = params.require(:item).permit(:title, :price, :description, :photo)
+		item_params[:user_id] = @user.id
+		@item = Item.new(item_params)
+		
+		if @item.save
+		 redirect_to('/items')
+		end
 	end
 
-	private
+	
 
-	def item_params
-	  	params.require(:item).permit(:title, :price, :description, :photo)
-	end
+	
 end

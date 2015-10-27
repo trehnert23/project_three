@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   post '/items', to: 'items#create'
   get '/items/:id', to: 'items#show'
 
+
+  get "/items/:id/edit", to: "items#edit", as: "item_edit"
+  patch "/items/:id/edit", to: "items_edit#update"
+
   post "/sessions", to: "sessions#create"
   delete '/sessions', to: 'sessions#destroy'
 
