@@ -1,18 +1,16 @@
 <%= render 'partials/nav_home' %>
 
-<!-- BARTER PAGE -->
-
-
 <div class="barter_their_half">
 	<div class="their_item">
 		<img src="<%= @item.photo %>">
 		<hr>
 		<p>Title: <%= @item.title %></p>
-		<p>Description: <%= @item.description %></p>
+		<p>Description: <%= @item.description %> <a class="email_button" target="_blank" href="mailto:<%= @email %>">Contact Seller!</a></p>
 		<p>Price: $<%= @item.price %></p>
-		<!-- <%= @email %> -->
 	</div>
 </div>
+
+
 
 <div class="barter_your_half">
 	<div class="items_container2">
@@ -24,10 +22,8 @@
 					<img class="items_list_image2" src="<%= item.photo %>"><br>
 					<p>Title: <%= item.title %></p>
 					<p>Price: $<%= item.price %></p>
-					<!-- <%= @current_user.email %> -->
 				</div>
 			<% end %>
 		</div>
 	</div>
 </div>
-

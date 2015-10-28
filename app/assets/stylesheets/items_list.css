@@ -2,6 +2,16 @@ body {
 	background-color: #e7e5e4;
 }
 
+.email_button {
+	text-decoration: none;
+	color: red;
+}
+
+.email_button:hover {
+	text-decoration: none;
+	color: blue;
+}
+
 .barter_header {
   font-size: 10vh;
   margin-left: -15vh;
@@ -146,7 +156,6 @@ body {
 
 .items_container2 {
 	width: 90%;
-	/*margin: 50px auto;*/
 	margin-top: 10vh;
 	margin-left: 6vh;
 }

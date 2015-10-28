@@ -1,33 +1,21 @@
-<head>
+<%= render 'partials/nav_home' %>
+
+<!-- <h1 class='elegantshadow'>Welcome To eBarter!</h1> -->
 
 
-</head>
+<p class="shadow text2_2">eBarter</p>
 
+<hr>
 
-
-<body>
-	<%= render 'partials/nav_home' %>
-
-	<!-- <h1 class='elegantshadow'>Welcome To eBarter!</h1> -->
-
-
-	<p class="shadow text2_2">eBarter</p>
-
-
-
-
-
-	<hr>
-	<div class="items_container">
-		<div id="columns">
-			<% @items.each do |item| %>
-				<div class="items_list">
-					<img class="items_list_image" src="<%= item.photo %>"><br>
-					<p>Title: <%= item.title %></p>
-					<p>Price: $<%= item.price %></p>
-					<a href="/items/<%= item.id %>">Barter!</a>
-				</div>
-			<% end %>
-		</div>
+<div class="items_container">
+	<div id="columns">
+		<% @items.each do |item| %>
+			<div class="items_list">
+				<img class="items_list_image" src="<%= item.photo %>"><br>
+				<p>Title: <%= item.title %></p>
+				<p>Price: $<%= item.price %></p>
+				<a href="/items/<%= item.id %>">Barter!</a>
+			</div>
+		<% end %>
 	</div>
-</body>
+</div>
