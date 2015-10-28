@@ -11,7 +11,7 @@ require 'ffaker'
 		title: FFaker::Product.product,
 		price: Random.rand(0...5000),
 		description: FFaker::Lorem.paragraph,
-		photo: 'image'+(Random.rand(0...9)).to_s+'.jpg'
+		photo: 'image'+(Random.rand(0...20)).to_s+'.jpg'
 	)
 
 	user.items << item
@@ -30,8 +30,9 @@ user2 = User.create(
 		title: FFaker::Product.product,
 		price: Random.rand(0...5000),
 		description: FFaker::Lorem.paragraph,
-		photo: 'image'+(Random.rand(0...9)).to_s+'.jpg'
+		photo: 'image'+(Random.rand(0...20)).to_s+'.jpg'
 	)
 
 	user2.items << item
 end
+
