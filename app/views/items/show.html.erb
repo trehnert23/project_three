@@ -16,7 +16,8 @@
 		<h1 class="barter_header">My Items</h1>
 		<hr>
 		<div class="email_div">
-			<a class="email_button" target="_blank" href="mailto:<%= @email %>">Click Here to Contact Seller!</a>
+			<a class="email_button" target="_blank" href="mailto:<%= @email %>?subject=eBarter Request!&body=Hello there!, <%= @current_user.email %> has expressed an interest in bartering with you for your <%= @item.title %>! Please email them back if you are interested in bartering with him. Thank you!    -eBarter Team">Click Here to Email Seller!</a>
+			<!-- <a class="email_button" target="_blank" href="mailto:<%= @email %>">Click Here to Contact Seller!</a> -->
 		</div>
 		<hr>
 		<div id="columns2">
