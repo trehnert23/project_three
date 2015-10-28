@@ -2,24 +2,27 @@
 
 <div class="barter_their_half">
 	<div class="their_item">
-		<img src="<%= @item.photo %>">
+		<%= image_tag(@item.photo) %><br>
 		<hr>
 		<p>Title: <%= @item.title %></p>
-		<p>Description: <%= @item.description %> <a class="email_button" target="_blank" href="mailto:<%= @email %>">Contact Seller!</a></p>
+		<p>Description: <%= @item.description %></p><br>
 		<p>Price: $<%= @item.price %></p>
 	</div>
 </div>
-
 
 
 <div class="barter_your_half">
 	<div class="items_container2">
 		<h1 class="barter_header">My Items</h1>
 		<hr>
+		<div class="email_div">
+			<a class="email_button" target="_blank" href="mailto:<%= @email %>">Click Here to Contact Seller!</a>
+		</div>
+		<hr>
 		<div id="columns2">
 			<% @current_user.items.each do |item| %>
 				<div class="items_list2">
-					<img class="items_list_image2" src="<%= item.photo %>"><br>
+					<%= image_tag(item.photo, class: "items_list_image2") %><br>
 					<p>Title: <%= item.title %></p>
 					<p>Price: $<%= item.price %></p>
 				</div>

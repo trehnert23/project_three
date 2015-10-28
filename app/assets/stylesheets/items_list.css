@@ -1,10 +1,13 @@
-body {
-	background-color: #e7e5e4;
+.email_div {
+	font-size: 4vh;
+	text-align: center;
+	font-family: Arvo;
 }
 
 .email_button {
 	text-decoration: none;
-	color: red;
+	color: white;
+	z-index: 999;
 }
 
 .email_button:hover {
@@ -122,6 +125,7 @@ body {
 .their_item img {
 	width: 90%;
 	margin: 5%;
+	border: 2px solid #030321;
 }
 
 .their_item p {
@@ -129,7 +133,7 @@ body {
 	margin-right: 10%;
 }
 
-.their_item p:nth-child(5) {
+.their_item p:nth-child(7) {
 	padding-bottom: 10%;
 }
 

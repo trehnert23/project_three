@@ -43,9 +43,9 @@
   <div id="columns">
     <% @items.each do |item| %>
       <div class="items_list">
-        <img class="items_list_image" src="<%= item.photo %>"><br>
+        <%= image_tag(item.photo, class: "items_list_image") %><br>
         <p>Title: <%= item.title %></p>
-        <p>Description: <%= item.description.first(80) %></p>
+        <p>Description: <%= item.description.first(80) %>...</p>
         <p>Price: <%= item.price %></p>
         <a href="/items/<%= item.id %>">Read More!</a>
       </div>
