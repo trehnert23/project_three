@@ -2,7 +2,11 @@
 
 <p class="shadow text2_2">eBarter</p>
 
-<hr>
+<br>
+<br>
+
+<p class="script"><span>Browse below to find the right product for you!</span></p>
+
 
 <div class="items_container">
 	<div id="columns">
@@ -12,7 +16,7 @@
 				<!-- <img class="items_list_image" src="<%= item.photo %>"><br> -->
 				<p>Title: <%= item.title %></p>
 				<p>Price: $<%= item.price %></p>
-				<a href="/items/<%= item.id %>">Barter!</a>
+				<p class="barter_tag"><a href="/items/<%= item.id %>">Barter!</a><p>
 			</div>
 		<% end %>
 	</div>
