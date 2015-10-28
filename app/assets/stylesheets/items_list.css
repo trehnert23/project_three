@@ -1,5 +1,5 @@
 body {
-	background-color: #0099ff;
+	background-color: #e7e5e4;
 }
 
 
@@ -87,6 +87,8 @@ body {
 .their_item {
 	background-color: grey;
 	width: 50vh;
+	margin-left: 25%;
+	margin-top: 15%;
 }
 
 .their_item img {
@@ -94,23 +96,29 @@ body {
 	margin: 1vh;
 }
 
+/*---------------------*/
+
+
 .barter_your_half {
 	margin-top: -5vh;
 	margin-left: 50%;
 	width: 50%;
-	height: 96vh;
+	height: 100%;
 	background-color: purple;
 }
 
 .your_item {
 	background-color: grey;
-	width: 50vh;
+	width: 30vh;
 }
 
 .your_list img {
-	width: 48vh;
-	margin: 1vh;
+	width: 90%;
+	margin: 5%;
+
 }
+
+
 
 
 

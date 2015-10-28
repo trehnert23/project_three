@@ -7,6 +7,9 @@ class ItemsController < ApplicationController
 		@user = User.find_by_id(params[:id])
 		@current_user = current_user
 		@item = Item.find(params[:id]);
+		@id = @item.user_id
+		@other_user = User.find_by_id(@id)
+		@email = @other_user.email
 	end
 
 	def new
