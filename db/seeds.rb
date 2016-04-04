@@ -1,6 +1,5 @@
-require 'ffaker'
-
 100.times do
+	require 'ffaker'
 	email = FFaker::Internet::email;
 	user = User.create(
 		email: email,
@@ -26,6 +25,7 @@ user2 = User.create(
 )
 
 15.times do
+	require 'ffaker'
 	item = Item.create(
 		title: FFaker::Product.product,
 		price: Random.rand(0...5000),
